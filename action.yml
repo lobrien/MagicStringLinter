@@ -6,3 +6,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:  
+
+on: push
