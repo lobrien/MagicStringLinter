@@ -1,0 +1,8 @@
+name: 'Scan for Forbidden Magic Strings'
+description: 'Outputs all files with strings such as en-us or tk'
+inputs:
+outputs:
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:  
