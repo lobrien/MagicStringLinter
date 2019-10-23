@@ -1,11 +1,6 @@
 on:
   push:
 name: Lint markdown
-jobs:
-  lintMarkdownFiles:
-    name: Lint markdown files
-    steps:
-    - uses: actions/checkout@master
-    - name: Lint markdown files
-    - uses: 'docker'
-    - image: 'Dockerfile'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
