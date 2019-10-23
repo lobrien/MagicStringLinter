@@ -1,6 +1,11 @@
 on:
   push:
 name: Lint markdown
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
+steps:
+  - name: Some python hello
+    shell: python
+    run: |
+      import os 
+      import argparse 
+
+      print(os.environ(['PATH']))
