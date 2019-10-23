@@ -1,8 +1,7 @@
-on:
-  push:
+on: push
 name: Lint markdown
 jobs:
-  my_job:
+  my-job:
   steps:
     - name: Some python hello
       shell: python
