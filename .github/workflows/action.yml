@@ -5,8 +5,7 @@ jobs:
     name: My job
     runs-on: ubuntu-latest  
     steps:
-      name: My step name
-      - uses: actions/checkout@v1
+      - name: My step name
       run: |
         import os 
 
