@@ -8,6 +8,7 @@ jobs:
     - uses: actions/checkout@v1
       with:
         fetch-depth: 1
+    - uses: lots0logs/gh-action-get-changed-files
     - name: My step name
       run: |
         import os 
