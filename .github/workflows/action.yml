@@ -6,11 +6,11 @@ jobs:
     runs-on: ubuntu-latest  
     steps:
     - name: My step name
-    run: |
-      import os 
+      run: |
+        import os 
 
-      print('Hello Github actions world')
-      print('Second line')
-      print(os.environ['PATH'])
-    shell: python
+        print('Hello Github actions world')
+        print('Second line')
+        print(os.environ['PATH'])
+      shell: python
         
