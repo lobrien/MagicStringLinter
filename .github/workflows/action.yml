@@ -4,9 +4,9 @@ jobs:
   my-job:
   steps:
   - name: My step name
-      shell: python
-      run: |
-        import os 
-        import argparse 
+    shell: python
+    run: |
+      import os 
+      import argparse 
 
-        print(os.environ(['PATH']))
+      print(os.environ(['PATH']))
