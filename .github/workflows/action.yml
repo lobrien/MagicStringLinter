@@ -3,7 +3,7 @@ name: Lint markdown
 jobs:
   my-job:
   steps:
-    - name: Some python hello
+  - name: My step name
       shell: python
       run: |
         import os 
