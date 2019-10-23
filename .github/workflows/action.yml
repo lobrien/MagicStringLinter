@@ -15,5 +15,7 @@ jobs:
         print('Hello Github actions world')
         print('Second line')
         print(os.environ['PATH'])
+        for f in os.listdir("."):
+          print(f)
       shell: python
         
