@@ -6,9 +6,7 @@ jobs:
     runs-on: ubuntu-latest  
     steps:
     - name: My step name
-      - uses: actions/checkout@master
-        with:
-          fetch-depth: 1
+      uses: actions/checkout@master
       run: |
         import os 
 
