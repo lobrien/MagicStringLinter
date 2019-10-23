@@ -2,11 +2,13 @@ on: push
 name: Lint markdown
 jobs:
   my-job:
-  steps:
-  - name: My step name
-    shell: python
-    run: |
-      import os 
-      import argparse 
+    name: My job
+    runs-on: ubuntu-latest  
+    steps:
+    - name: My step name
+      shell: python
+      run: |
+        import os 
+        import argparse 
 
-      print(os.environ(['PATH']))
+        print(os.environ(['PATH']))
