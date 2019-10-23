@@ -11,4 +11,4 @@ jobs:
         import os 
         import argparse 
 
-        print(os.environ(['PATH']))
+        print(f"Hello Github actions world")
