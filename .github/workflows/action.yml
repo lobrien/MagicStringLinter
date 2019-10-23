@@ -11,13 +11,18 @@ jobs:
     - name: My step name
       run: |
         import os 
+        import json
 
-        print('Hello Github actions world')
-        print('Second line')
+        def readJson(path) :
+          with open(path) as json_file:
+            data = json.load(json_file)
+            return data
         print(os.environ['PATH'])
         for f in os.listdir("."):
           print(f)
         path = os.environ['GITHUB_EVENT_PATH']
         print('Event path is %s' % path)
+        event = readJson(path)
+        print(event)
       shell: python
         
