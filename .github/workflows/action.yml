@@ -18,6 +18,6 @@ jobs:
         for f in os.listdir("."):
           print(f)
         path = os.environ['GITHUB_EVENT_PATH']
-        print(f'Event path is {path}')
+        print('Event path is %s' % path)
       shell: python
         
