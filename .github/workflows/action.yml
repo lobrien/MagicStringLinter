@@ -7,8 +7,4 @@ jobs:
     steps:
     - name: My step name
       shell: python
-      run: |
-import os 
-import argparse 
-
-print(f"Hello Github actions world")
+      run: print(f"Hello Github actions world")
