@@ -19,6 +19,7 @@ url = 'https://api.github.com/repos/lobrien/MagicStringLinter/commits/1445bb6f50
 print('HARDCODE is at %s' % url)
 tree_response = requests.get(url)
 tree_json = json.loads(tree_response.content)
-print(json.dumps(tree_json, indent=2))
+fs = tree_json["files"]
+print(json.dumps(fs, indent=2))
 
 print("Hello, actions")
