@@ -1,0 +1,14 @@
+on: push
+name: Run script
+jobs:
+  my-job:
+    name: Runs a script
+    runs-on: ubuntu-latest  
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: Inline python step
+      run: foo.py
+      shell: python
+        
