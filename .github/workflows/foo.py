@@ -16,10 +16,11 @@ event = readJson(path)
 print(json.dumps(event['head_commit'], indent=2))
 url = event['head_commit']['url']
 print('HEAD is at %s' % url)
-sha = event['head_commit']['sha']
+sha = event['head_commit']['id']
 print(f"SHA is {sha}")
-url = 'https://api.github.com/repos/lobrien/MagicStringLinter/commits/1445bb6f501df462f2480eba3bf924782198a05a'
-print('HARDCODE is at %s' % url)
+#TODO Dynamic path to current repo
+url = f'https://api.github.com/repos/lobrien/MagicStringLinter/commits/{sha}'
+print('Commit is at %s' % url)
 tree_response = requests.get(url)
 tree_json = json.loads(tree_response.content)
 fs = tree_json["files"]
