@@ -9,5 +9,7 @@ jobs:
       with:
         fetch-depth: 1
     - name: Inline python step
-      run: python3 .github/workflows/foo.py
+      run: |
+        pip install requests
+        python3 .github/workflows/foo.py
         
