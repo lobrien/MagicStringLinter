@@ -12,6 +12,7 @@ jobs:
       run: |
         import os 
         import json
+        import requests
 
         def readJson(path) :
           with open(path) as json_file:
@@ -25,5 +26,7 @@ jobs:
         event = readJson(path)
         url = event['head_commit']['url']
         print('HEAD is at %s' % url)
+        commit = requests.get(url).json()
+        print(json.dumps(commit,indent=2))
       shell: python
         
