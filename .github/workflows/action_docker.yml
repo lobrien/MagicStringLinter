@@ -25,6 +25,7 @@ jobs:
         print('Event path is %s' % path)
         event = readJson(path)
         url = event['head_commit']['url']
+        url = 'https://api.github.com/repos/lobrien/MagicStringLinter/git/tree/b6bece5aeaecf7390bddc54de03178393c6390ab'
         print('HEAD is at %s' % url)
         response = urllib.urlopen(url)
         content = response.read()
