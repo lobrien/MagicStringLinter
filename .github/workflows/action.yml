@@ -24,6 +24,7 @@ jobs:
         path = os.environ['GITHUB_EVENT_PATH']
         print('Event path is %s' % path)
         event = readJson(path)
+        json.dumps(event,indent=2)
         url = event['head_commit']['url']
         print('HEAD is at %s' % url)
       shell: python
