@@ -4,8 +4,9 @@ import json
 
 def readJson(path) :
     with open(path) as json_file:
-    data = json.load(json_file)
-    return data
+        data = json.load(json_file)
+        return data
+        
 print(os.environ['PATH'])
 for f in os.listdir("."):
     print(f)
