@@ -26,9 +26,9 @@ jobs:
         event = readJson(path)
         url = event['head_commit']['url']
         print('HEAD is at %s' % url)
-        with urllib.urlopen(url) as response:
-          content = response.read()
-          commit = json.loads(content)
-          print(json.dumps(commit,indent=2))
+        response = urllib.urlopen(url)
+        content = response.read()
+        commit = json.loads(content)
+        print(json.dumps(commit,indent=2))
       shell: python
         
