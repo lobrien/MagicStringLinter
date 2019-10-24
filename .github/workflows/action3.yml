@@ -9,6 +9,5 @@ jobs:
       with:
         fetch-depth: 1
     - name: Inline python step
-      run: foo.py
-      shell: python
+      run: python foo.py
         
