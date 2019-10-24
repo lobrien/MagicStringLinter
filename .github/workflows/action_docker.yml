@@ -1,5 +1,5 @@
 on: push
-name: Lint markdown
+name: Docker-based Python action
 jobs:
   my-job:
     name: My job
@@ -12,8 +12,8 @@ jobs:
       run: |
         import os 
         import json
-        import urllib
-        
+        import urllib.request 
+
         def readJson(path) :
           with open(path) as json_file:
             data = json.load(json_file)
@@ -26,8 +26,9 @@ jobs:
         event = readJson(path)
         url = event['head_commit']['url']
         print('HEAD is at %s' % url)
-        import requests
-        commit = requests.get(url).json()
-        print(json.dumps(commit,indent=2))
+        with urllib.request.urlopen(url) as response:
+          content = response.read()
+          commit = json.loads(content)
+          print(json.dumps(commit,indent=2))
       shell: python
         
