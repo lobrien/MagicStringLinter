@@ -7,6 +7,9 @@ def readJson(path) :
         data = json.load(json_file)
         return data
 
+def filter(fname) : 
+    print(fname)
+
 print(os.environ['PATH'])
 for f in os.listdir("."):
     print(f)
@@ -24,9 +27,9 @@ print('Commit is at %s' % url)
 tree_response = requests.get(url)
 tree_json = json.loads(tree_response.content)
 fs = tree_json["files"]
-to_check = (f["filename"] for f in fs if f["status"] in ["added", "modified"])
+to_check = (f["filename"] for f in fs if f["status"] in ["added", "modified"] and f[-3:] == ".md")
 print(json.dumps(fs, indent=2))
 print("-----------------------")
 print("File to check:")
 for f in to_check : 
-    print(f)
+    filter(f)
